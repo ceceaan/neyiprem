@@ -95,7 +95,7 @@ const products = [
     image: "https://www.visionplustv.id/_nuxt/img/set-top-box-clean.4742a46.png",
     description: "   Vision+ premium ✿\n     7 hari private : Rp. 15.000\n    Hanya untuk menonton Timnas, tidak bisa untuk film/drama."
   },
-  {
+  
 
   // RCTI+ Premium
    {
