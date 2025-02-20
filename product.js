@@ -96,14 +96,6 @@ const products = [
     description: "   Vision+ premium ✿\n     7 hari private : Rp. 15.000\n    Hanya untuk menonton Timnas, tidak bisa untuk film/drama."
   },
   {
-    id: 11,
-    name: "Vision+ Premium - 1 Tahun",
-    price: 125000,
-    originalPrice: 150000,
-    category: "Vision+",
-    image: "https://www.visionplustv.id/_nuxt/img/set-top-box-clean.4742a46.png",
-    description: "   Vision+ premium ✿\n    Hanya untuk menonton Timnas, tidak bisa untuk film/drama."
-  },
 
   // RCTI+ Premium
    {
