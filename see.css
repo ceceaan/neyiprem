@@ -12,6 +12,7 @@ body {
     padding: 10px;
 }
 
+/* Links */
 .col-12 a {
     background-color: #edbee1;
     color: white;
@@ -19,12 +20,14 @@ body {
     display: inline-block;
     border-radius: 5px;
     text-align: center;
+    transition: color 0.3s ease;
 }
 
 .col-12 a:hover {
     color: #f8c2fd;
 }
 
+/* Categories */
 .category {
     border: 0;
     width: 100%;
@@ -33,26 +36,27 @@ body {
     color: rgb(255, 211, 249);
 }
 
+/* Cart Bubble */
 .cart-bubble {
-   position: fixed;
-   right: 20px;
-   bottom: 20px;
-   background-color: #fde0e0;
-   color: white;
-   padding: 12px 20px;
-   border-radius: 50px;
-   text-decoration: none;
-   font-size: 16px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   transition: background-color 0.3s ease;
-   z-index: 9999; /* Pastikan ini lebih tinggi dari elemen lain */
-    }
-    
-    .cart-bubble:hover {
-   background-color: #f1d9ee;
-    }
-    
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fde0e0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 9999; /* Ensure this is higher than other elements */
+}
 
+.cart-bubble:hover {
+    background-color: #f1d9ee;
+}
+
+/* Scroll to Top Arrow */
 .arrow-up {
     position: fixed;
     left: 20px;
@@ -68,6 +72,7 @@ body {
     z-index: 9999;
 }
 
+/* Product List */
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -93,18 +98,34 @@ body {
     border: 0;
     padding: 8px 12px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .product-list .row .col-2 .btn:hover {
     background-color: #fbe5e5;
 }
 
+/* Headings */
 h2 {
-    display: none;
+    display: none; /* Hide h2 if not needed */
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Filters */
 .filters {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .filters li {
@@ -138,6 +159,7 @@ h2 {
     margin-right: 10px;
 }
 
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: nowrap;
@@ -155,11 +177,13 @@ h2 {
     border-radius: 5px;
 }
 
+/* Categories Wrapper */
 .categories-wrapper {
     white-space: nowrap;
     padding: 10px 0;
 }
 
+/* Button Pill */
 .btn-pill {
     padding: 10px 20px;
     white-space: nowrap;
@@ -167,23 +191,43 @@ h2 {
     border-radius: 25px;
 }
 
+/* Product Image */
 .product-image {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Bikin foto tetap 4x4 (square) */
-    object-fit: cover; /* Supaya gambar tidak terdistorsi */
+    aspect-ratio: 1 / 1; /* Maintain square aspect ratio */
+    object-fit: cover; /* Prevent image distortion */
     border-radius: 10px;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 576px) {
+    .product-list {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    .product-list .row .col-2 {
+        max-width: 90%; /* Allow more width on mobile */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Smaller heading on mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Smaller paragraph on mobile */
+    }
+}
 
 @media (min-width: 577px) and (max-width: 992px) {
     .product-list {
         display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
         gap: 15px;
     }
-}
 
     .product-list .row .col-2 {
-        width: 90%;
+        width: 100%; /* Full width on medium screens */
         max-width: none;
     }
 
@@ -193,18 +237,6 @@ h2 {
         margin-bottom: 10px;
     }
 
-    h3 {
-        font-size: 1.5rem;
-        margin-bottom: 8px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 1.2rem;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
     .filters {
         text-align: center;
     }
@@ -212,3 +244,14 @@ h2 {
     .tags {
         justify-content: center;
     }
+}
+
+@media (min-width: 993px) {
+    .product-list {
+        display: flex; /* Flex layout for larger screens */
+    }
+
+    .product-list .row .col-2 {
+        width: 25%; /* Four items per row on large screens */
+    }
+}
