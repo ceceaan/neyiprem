@@ -288,7 +288,7 @@ function updateCart() {
     const adminFee = total * 0.00
     ;
     const totalWithFee = total + adminFee;
-    const finalMessage = `Nama: ${name}%0username: ${location}%0A%0A${message}%0A%0ATotal: ${formatRupiah(totalWithFee)}`;
+    const finalMessage = `add req: ${name}%0username: ${location}%0A%0A${message}%0A%0ATotal: ${formatRupiah(totalWithFee)}`;
    const telegramUsername = "Catcihy"; // Ganti dengan username Telegram yang dituju
     const url = `https://t.me/${telegramUsername}?text=${finalMessage}`;
     window.open(url, '_blank');
