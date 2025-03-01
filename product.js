@@ -700,7 +700,7 @@ const products = [
     category: "prime",
     image: "https://play-lh.googleusercontent.com/Uyk7DkQElC-0OfJCOHZLIgnQ0ulHoEC06d9ENRklNh-0t6nrFc6mqmpRMajoVU3Yt9w",
     description: ""
-  },.
+  },
   {
     id: 79,
     name: "Prime video 3U",
